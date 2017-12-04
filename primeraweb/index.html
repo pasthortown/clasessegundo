@@ -4,9 +4,14 @@
     <meta charset="utf-8"/>
     <meta name="author" content="Desarrollo de Software Yavirac">
     <title>USO WS</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+    <script src="./libs/jquery.min.js"></script>  
+    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.common.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.default.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.default.mobile.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.rtl.min.css">
+    <script src="./libs/kendo/kendo.all.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>    
@@ -53,6 +58,22 @@
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
                         <input type="text" class="form-control" id="descripcionBuscar" placeholder="Descripción" onkeyup="leerfiltrado()">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="datePickerKendo" placeholder="Fecha" style="width:100%";>
+                </div>
+                <div class="form-group">
+                    <span id="codigoBarrasKendo"></span>
+                </div>
+                <div class="form-group">
+                    <div id="codigoQRKendo"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="comboKendo" placeholder="País" style="width:100%";>
+                </div>
+                <div class="form-group">
+                    <div id="tablaKendo">
                     </div>
                 </div>
             </div>

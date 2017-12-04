@@ -2,8 +2,91 @@ var urlWS = "";
 $(document).ready(function(){
    urlWS = "http://localhost/sae/server/";
    leer(0);
+   crearTablaKendo();
+   crearComboKendo();
+   crearDatePickerKendo();
+   crearCodigoBarrasKendo();
+   crearQRKendo();
 });
 
+function crearQRKendo(){
+    $("#codigoQRKendo").kendoQRCode({
+        value: "Esto fue realizado con Kendo",
+        size: 120,
+        color: "#e15613",
+        background: "transparent"
+    });
+}
+
+function crearTablaKendo(){
+    $("#tablaKendo").kendoGrid({
+        dataSource: {
+           pageSize: 5,
+           transport: {
+              read: {
+                    url: urlWS+"/persona/leer",
+                    dataType: "json"
+              }
+           }
+        },
+        columns: [
+           {field: "identificacion", title: "Cédula"},
+           {field: "nombre1", title: "Primer Nombre"},
+           {field: "apellido1", title: "Primer Apellido"}
+        ],
+        pageable:   true,
+        selectable:   true,
+        filterable: {
+            mode: "row",
+            extra: false,
+            operators: {
+               String: {
+                  contains: "Contains"
+               }
+            }
+        },
+        change: itemSeleccionado
+    });
+}
+
+function crearComboKendo(){
+    $("#comboKendo").kendoComboBox({
+        dataTextField: "descripcion",
+        dataValueField: "codigo",
+        dataSource: {
+            transport: {
+               read: {
+                     url: urlWS+"/ubicacion/leer",
+                     dataType: "json"
+               }
+            }
+         },
+         filter: "contains",
+         suggest: true
+    });
+}
+
+function crearCodigoBarrasKendo(){
+    $("#codigoBarrasKendo").kendoBarcode({
+        value: "Clases Segundo",
+        type: "code128",
+        width: 280,
+        height: 100
+    });
+}
+
+function crearDatePickerKendo(){
+    $("#datePickerKendo").kendoDatePicker({
+        value: new Date(),
+        dateInput: true
+    });
+}
+
+function itemSeleccionado(){
+   var datos = $("#tablaKendo").data("kendoGrid");
+   var selectedItem = datos.dataItem(datos.select());
+   alert('La Cédula de ' + selectedItem.nombre1 + ' ' + selectedItem.nombre2 + ' ' + selectedItem.apellido1 + ' ' + selectedItem.apellido2 + ' es: '+ selectedItem.identificacion);
+}
 
 function limpiar(){
     document.getElementById("id").value = "";
