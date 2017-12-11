@@ -186,9 +186,17 @@ function actualizar(){
         async:false,
         success:  function (respuesta) {
             if(respuesta=="false"){
-                alert("Error al actualizar el registro");
+                swal(
+                    'Error al actualizar el registro',
+                    '',
+                    'error'
+                  )
             }else{
-                alert("Registro actualizado.");
+                swal(
+                    'Registro actualizado.',
+                    'OK',
+                    'success'
+                  )
             }
         }
     });

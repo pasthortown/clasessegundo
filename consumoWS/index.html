@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Desarrollo de Software Yavirac">
+    <title>USO WS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.common.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.default.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.default.mobile.min.css">
+    <link rel="stylesheet" href="./libs/kendo/style/kendo.rtl.min.css">
+    <link rel="stylesheet" href="./libs/metro/css/metro.css">
+    <link rel="stylesheet" href="./libs/metro/css/metro-colors.css">
+    <link rel="stylesheet" href="./libs/metro/css/metro-icons.css">
+    <link rel="stylesheet" href="./libs/metro/css/metro-responsive.css">
+    <link rel="stylesheet" href="./libs/metro/css/metro-rtl.css">
+    <link rel="stylesheet" href="./libs/metro/css/metro-schemes.css">
+    <script src="./libs/metro/js/metro.js"></script>
+    <script src="./libs/kendo/kendo.all.min.js"></script>
+    <script src="script.js"></script>
+    <!-- METRO NO TRABAJA EN CONJUNTO CON KENDO, HAY QUE ESCOGER CUAL UTILIZAR-->
+</head>
+<body>    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center text-primary">
+                    OBTENER DATOS DEL WEB SERVICE
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3"></div>
+            <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-info" onclick="leer()">
+                        <span class="glyphicon glyphicon-refresh"></span>&nbsp;LEER
+                    </button>
+                    <button type="button" class="btn btn-success" onclick="crear()">
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp;CREAR
+                    </button>
+                    <button type="button" class="btn btn-warning" onclick="actualizar()">
+                        <span class="glyphicon glyphicon-ok"></span>&nbsp;ACTUALIZAR
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="borrar()">
+                        <span class="glyphicon glyphicon-minus"></span>&nbsp;BORRAR
+                    </button>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <div id="tablaKendo">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>id</label>
+                    <input type="text" class="form-control" id="id" placeholder="Identificador">
+                </div>
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" placeholder="Descripción">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
