@@ -9,6 +9,12 @@ $(document).ready(function(){
    crearQRKendo();
 });
 
+function crearPDF(){
+    kendo.drawing.drawDOM($("#contenido")).then(function(group) {
+          kendo.drawing.pdf.saveAs(group, "Converted PDF.pdf");
+    });
+}
+
 function crearQRKendo(){
     $("#codigoQRKendo").kendoQRCode({
         value: "Esto fue realizado con Kendo",

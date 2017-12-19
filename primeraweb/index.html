@@ -4,10 +4,10 @@
     <meta charset="utf-8"/>
     <meta name="author" content="Desarrollo de Software Yavirac">
     <title>USO WS</title>
-    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./libs/sweet-alert/sweetalert2.css">
-    <script src="./libs/jquery.min.js"></script>  
-    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./libs/kendo/style/kendo.common.min.css">
     <link rel="stylesheet" href="./libs/kendo/style/kendo.default.min.css">
     <link rel="stylesheet" href="./libs/kendo/style/kendo.default.mobile.min.css">
@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="./libs/metro/css/metro-rtl.css">
     <link rel="stylesheet" href="./libs/metro/css/metro-schemes.css">
     <script src="./libs/metro/js/metro.js"></script>
-    <script src="./libs/kendo/kendo.all.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
     <script src="./libs/sweet-alert/sweetalert2.common.js"></script>
     <script src="./libs/sweet-alert/sweetalert2.js"></script>
     <script src="script.js"></script>
 
     <!-- METRO NO TRABAJA EN CONJUNTO CON KENDO, HAY QUE ESCOGER CUAL UTILIZAR-->
 </head>
-<body>    
+<body id="contenido">    
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -49,6 +49,9 @@
                     </button>
                     <button type="button" class="btn btn-danger" onclick="borrar()">
                         <span class="glyphicon glyphicon-minus"></span>&nbsp;BORRAR
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="crearPDF()">
+                        <span class="glyphicon glyphicon-minus"></span>&nbsp;PDF
                     </button>
                 </div>
             </div>
