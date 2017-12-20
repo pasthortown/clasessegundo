@@ -47,4 +47,23 @@ function retornaDiasJson(){
     $dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
     return json_encode($dias);
 }
-echo retornaDiasJson();
+
+function factorial($numero) {
+    $respuesta = 1;
+    for ( $i = 1; $i <= $numero; $i++ ) {
+        $respuesta = $respuesta * $i;
+    }
+    return $respuesta;
+}
+
+function limiteCalculable(){
+    $numero = 1;
+    $sigue = true;
+    while($sigue){
+        if (factorial($numero)."INITO" == "INFINITO") {
+            return $numero;
+        }
+        $numero++;
+    }
+}
+echo factorial(171);
