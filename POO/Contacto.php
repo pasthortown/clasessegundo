@@ -8,4 +8,8 @@ class Contacto {
         $this->nombre = $nombre;
         $this->telefono = $telefono;
     }
+
+    function saluda(){
+        return "HOLA";
+    }
 }

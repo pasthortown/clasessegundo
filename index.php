@@ -66,4 +66,4 @@ function limiteCalculable(){
         $numero++;
     }
 }
-echo factorial(171);
+echo dividir(15,4);
